@@ -1,3 +1,7 @@
 .navbar-brand {
     font-family: 'Philosopher', sans-serif;
 }
+
+.navbar {
+    background-color: #EEF2E6;
+}
