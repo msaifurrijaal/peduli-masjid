@@ -112,7 +112,7 @@
                 <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
                   <!-- Navbar dropdown -->
                   <li class="nav-item dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
                       data-mdb-toggle="dropdown" aria-expanded="false">
                       E-WALLET
                     </a>
@@ -171,5 +171,11 @@
             <!-- Container wrapper -->
           </nav>
     </div>
+    <div class="container mt-5">
+        <form action="/transaction" method="get">
+            <button type="submit" style="background-color: #C5B673" class="btn py-1">Login</button>
+        </form>
+    </div>
+    
 </div>
 @endsection

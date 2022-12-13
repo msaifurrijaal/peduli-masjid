@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\transaksi;
 use App\Models\PaymentBill;
-use App\Http\Requests\StoretransaksiRequest;
-use App\Http\Requests\UpdatetransaksiRequest;
+use App\Http\Requests\StorePaymentBillRequest;
+use App\Http\Requests\UpdatePaymentBillRequest;
 
-class TransaksiController extends Controller
+class PaymentBillController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        return view('transaction');
+        //
     }
 
     /**
@@ -32,26 +31,21 @@ class TransaksiController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoretransaksiRequest  $request
+     * @param  \App\Http\Requests\StorePaymentBillRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoretransaksiRequest $request)
+    public function store(StorePaymentBillRequest $request)
     {
-        $validatedData = $request->validate([
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
-        ]);
-
-        PaymentBill::create($validatedData);
-        return redirect('/');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\transaksi  $transaksi
+     * @param  \App\Models\PaymentBill  $paymentBill
      * @return \Illuminate\Http\Response
      */
-    public function show(transaksi $transaksi)
+    public function show(PaymentBill $paymentBill)
     {
         //
     }
@@ -59,10 +53,10 @@ class TransaksiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\transaksi  $transaksi
+     * @param  \App\Models\PaymentBill  $paymentBill
      * @return \Illuminate\Http\Response
      */
-    public function edit(transaksi $transaksi)
+    public function edit(PaymentBill $paymentBill)
     {
         //
     }
@@ -70,11 +64,11 @@ class TransaksiController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatetransaksiRequest  $request
-     * @param  \App\Models\transaksi  $transaksi
+     * @param  \App\Http\Requests\UpdatePaymentBillRequest  $request
+     * @param  \App\Models\PaymentBill  $paymentBill
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatetransaksiRequest $request, transaksi $transaksi)
+    public function update(UpdatePaymentBillRequest $request, PaymentBill $paymentBill)
     {
         //
     }
@@ -82,10 +76,10 @@ class TransaksiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\transaksi  $transaksi
+     * @param  \App\Models\PaymentBill  $paymentBill
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transaksi $transaksi)
+    public function destroy(PaymentBill $paymentBill)
     {
         //
     }
